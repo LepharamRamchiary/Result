@@ -1,0 +1,40 @@
+.result {
+    width: 100%;
+    height: auto;
+}
+
+.result li {
+    padding: 1rem;    
+}
+
+h1 {
+    font-size: 2rem;
+}
+.result a {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #222;
+}
+
+a:hover {
+    color: blueviolet;
+}
+
+@media screen and (max-width: 550px) {
+    h1{
+        font-size: 1.5rem;
+    }
+    .result li {
+        padding: 0.7rem;    
+    }
+    
+    .result a {
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: blueviolet;
+    }
+    
+}
