@@ -1,13 +1,38 @@
-import React from 'react'
-import "./HooksStyle.css"
+import React, { useState } from 'react'
+import { sculptureList } from './data'
 
 function Hooks() {
-    return (
-        <div className='result'>
-            <h1>HSLC Result Declared Today: 10:30 AM </h1>
-            <li><a href="https://sebaonline.org/">SEBA Official Site</a></li>
+    const [index, setIndex] = useState(0);
+    const [showMore, setShowMore] = useState(false);
 
-            <li><a href="https://resultsassam.nic.in/">Result Assam Site</a></li>
+    function handleShowMore() {
+        setShowMore(!showMore);
+    }
+
+    function handleClick() {
+       setIndex(index + 1);
+    }
+
+    let seculpture = sculptureList[index];
+    return (
+        <div>
+            <h1>Hello world</h1>
+            <button onClick={handleClick}>Next</button>
+            <h2><i>{seculpture.name}</i>
+                by {seculpture.artist}
+            </h2>
+            <h3>
+                ({index + 1} of {sculptureList.length})
+            </h3>
+            <button onClick={handleShowMore}>
+                {showMore ? 'Hide' : "Show"} details
+            </button>
+            {showMore && <p>{seculpture.description}</p>}
+            <img
+                src={seculpture.url}
+                alt={seculpture.alt}
+            />
+            
         </div>
     )
 }
