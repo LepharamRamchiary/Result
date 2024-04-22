@@ -1,0 +1,13 @@
+.demo{
+    display: grid;
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
